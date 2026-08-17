@@ -1,0 +1,846 @@
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+
+/* =========================
+   PAGE BANNER
+========================= */
+
+.page-banner {
+  position: relative;
+  width: 100%;
+  min-height: 330px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(4, 24, 72, 0.96),
+      rgba(9, 36, 95, 0.88)
+    ),
+    url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1800&q=80");
+
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* Decorative circles */
+
+.page-banner::before,
+.page-banner::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.page-banner::before {
+  width: 260px;
+  height: 260px;
+
+  top: -120px;
+  left: -80px;
+
+  border: 1px solid rgba(228, 162, 27, 0.35);
+}
+
+.page-banner::after {
+  width: 340px;
+  height: 340px;
+
+  right: -150px;
+  bottom: -180px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.page-banner > div {
+  position: relative;
+  z-index: 2;
+
+  padding: 30px 20px;
+
+  animation: bannerFade 0.8s ease both;
+}
+
+.page-banner p {
+  margin-bottom: 14px;
+
+  color: #e4a21b;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.page-banner h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 700;
+
+  line-height: 1.15;
+}
+
+.page-banner h1::after {
+  content: "";
+
+  display: block;
+
+  width: 55px;
+  height: 3px;
+
+  margin: 18px auto 0;
+
+  background: #e4a21b;
+
+  border-radius: 5px;
+}
+
+
+/* =========================
+   INTRODUCTION
+========================= */
+
+.about-intro {
+  width: 90%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 80px 0;
+
+  display: grid;
+
+  grid-template-columns: 1.5fr 0.8fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+.about-text .small-title {
+  margin-bottom: 10px;
+
+  color: #e4a21b;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.about-text h2 {
+  margin-bottom: 22px;
+
+  color: #09245f;
+
+  font-size: 40px;
+
+  line-height: 1.15;
+}
+
+.about-text h2 span {
+  color: #e4a21b;
+}
+
+.about-text > p:not(.small-title) {
+  margin-bottom: 18px;
+
+  color: #555b66;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+.about-btn {
+  margin-top: 10px;
+
+  padding: 13px 23px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #061d57;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.about-btn:hover {
+  background: #0d317f;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 8px 18px rgba(6, 29, 87, 0.2);
+}
+
+
+/* =========================
+   VISION BOX
+========================= */
+
+.about-box {
+  position: relative;
+
+  min-height: 320px;
+
+  padding: 42px 32px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f8faff,
+      #eef3fb
+    );
+
+  border: 1px solid #e1e8f3;
+
+  border-top: 5px solid #e4a21b;
+
+  box-shadow: 0 10px 30px rgba(9, 36, 95, 0.09);
+
+  transition: all 0.3s ease;
+}
+
+.about-box:hover {
+  transform: translateY(-7px);
+
+  box-shadow: 0 18px 35px rgba(9, 36, 95, 0.14);
+}
+
+.about-box::before {
+  content: "";
+
+  position: absolute;
+
+  width: 90px;
+  height: 90px;
+
+  top: -35px;
+  right: -35px;
+
+  border-radius: 50%;
+
+  background: rgba(228, 162, 27, 0.08);
+}
+
+.about-box-icon {
+  width: 78px;
+  height: 78px;
+
+  margin-bottom: 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eaf0ff;
+
+  font-size: 36px;
+
+  transition: transform 0.3s ease;
+}
+
+.about-box:hover .about-box-icon {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+.about-box h3 {
+  margin-bottom: 13px;
+
+  color: #09245f;
+
+  font-size: 24px;
+}
+
+.about-box p {
+  color: #5d6470;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   NEW ERA FUTURE IAS ACADEMY
+========================= */
+
+.academy-section {
+  width: 100%;
+
+  padding: 75px 7%;
+
+  display: grid;
+
+  grid-template-columns: 1.4fr 0.8fr;
+
+  align-items: center;
+
+  gap: 70px;
+
+  background:
+    radial-gradient(
+      circle at 10% 50%,
+      rgba(228, 162, 27, 0.08),
+      transparent 30%
+    ),
+    #f8faff;
+}
+
+
+/* ACADEMY CONTENT */
+
+.academy-content {
+  max-width: 720px;
+}
+
+.academy-content .small-title {
+  margin-bottom: 12px;
+
+  color: #e4a21b;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+}
+
+.academy-content h2 {
+  margin-bottom: 22px;
+
+  color: #09245f;
+
+  font-size: 38px;
+
+  line-height: 1.2;
+}
+
+.academy-content h2 span {
+  color: #e4a21b;
+}
+
+.academy-content p:not(.small-title) {
+  margin-bottom: 16px;
+
+  color: #626976;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* ACADEMY BUTTON */
+
+.academy-btn {
+  display: inline-block;
+
+  margin-top: 10px;
+
+  padding: 13px 23px;
+
+  border-radius: 7px;
+
+  background: #061d57;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.academy-btn:hover {
+  background: #0d317f;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 22px rgba(6, 29, 87, 0.2);
+}
+
+
+/* ACADEMY CARD */
+
+.academy-card {
+  position: relative;
+
+  min-height: 300px;
+
+  padding: 40px 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e7f1;
+
+  border-radius: 20px;
+
+  border-top: 5px solid #e4a21b;
+
+  box-shadow: 0 12px 35px rgba(9, 36, 95, 0.10);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.academy-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 170px;
+  height: 170px;
+
+  top: -90px;
+  right: -70px;
+
+  border-radius: 50%;
+
+  background: rgba(228, 162, 27, 0.08);
+}
+
+.academy-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 120px;
+  height: 120px;
+
+  bottom: -65px;
+  left: -55px;
+
+  border-radius: 50%;
+
+  background: rgba(6, 29, 87, 0.05);
+}
+
+.academy-card:hover {
+  transform: translateY(-9px);
+
+  box-shadow: 0 20px 42px rgba(9, 36, 95, 0.16);
+}
+
+
+/* ACADEMY ICON */
+
+.academy-icon {
+  width: 78px;
+  height: 78px;
+
+  margin-bottom: 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eaf0ff;
+
+  font-size: 36px;
+
+  transition: all 0.35s ease;
+}
+
+.academy-card:hover .academy-icon {
+  transform: scale(1.1) rotate(-5deg);
+
+  background: #fff4d8;
+}
+
+
+/* ACADEMY TITLE */
+
+.academy-card h3 {
+  position: relative;
+  z-index: 2;
+
+  margin-bottom: 5px;
+
+  color: #09245f;
+
+  font-size: 22px;
+}
+
+.academy-card p {
+  position: relative;
+  z-index: 2;
+
+  color: #e4a21b;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.academy-line {
+  position: relative;
+  z-index: 2;
+
+  width: 45px;
+  height: 3px;
+
+  margin: 16px 0;
+
+  background: #e4a21b;
+
+  border-radius: 5px;
+}
+
+.academy-card span {
+  position: relative;
+  z-index: 2;
+
+  color: #6b7280;
+
+  font-size: 12px;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================
+   MISSION SECTION
+========================= */
+
+.mission-section {
+  width: 100%;
+
+  padding: 70px 5% 85px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+
+  background: #f5f7fb;
+}
+
+.mission-card {
+  position: relative;
+
+  padding: 38px 28px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border-radius: 15px;
+
+  border: 1px solid #e5e9f0;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.mission-card:hover {
+  transform: translateY(-8px);
+
+  border-color: #d8e1f0;
+
+  box-shadow: 0 15px 30px rgba(9, 36, 95, 0.1);
+}
+
+.mission-icon {
+  width: 68px;
+  height: 68px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fff6df;
+
+  font-size: 30px;
+
+  transition: all 0.3s ease;
+}
+
+.mission-card:hover .mission-icon {
+  transform: scale(1.08);
+
+  background: #fff0c8;
+}
+
+.mission-card h3 {
+  margin-bottom: 12px;
+
+  color: #09245f;
+
+  font-size: 20px;
+}
+
+.mission-card p {
+  color: #626874;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+.about-page .reveal {
+  opacity: 0;
+
+  transform: translateY(50px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.about-page .reveal.show {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* Vision delay */
+
+.about-page .about-box.reveal {
+  transition-delay: 0.12s;
+}
+
+
+/* Academy delay */
+
+.academy-section .academy-card.reveal {
+  transition-delay: 0.15s;
+}
+
+
+/* Mission delays */
+
+.about-page .mission-card:nth-child(2) {
+  transition-delay: 0.12s;
+}
+
+.about-page .mission-card:nth-child(3) {
+  transition-delay: 0.24s;
+}
+
+
+/* =========================
+   BANNER ANIMATION
+========================= */
+
+@keyframes bannerFade {
+  from {
+    opacity: 0;
+
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .about-intro {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .about-text h2 {
+    font-size: 34px;
+  }
+
+  .academy-section {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    padding: 60px 7%;
+  }
+
+  .academy-content h2 {
+    font-size: 34px;
+  }
+
+  .mission-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .page-banner {
+    min-height: 240px;
+  }
+
+  .page-banner p {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+  }
+
+  .page-banner h1 {
+    font-size: 32px;
+  }
+
+  .about-intro {
+    width: 88%;
+
+    padding: 55px 0;
+  }
+
+  .about-text h2 {
+    font-size: 29px;
+  }
+
+  .about-text > p:not(.small-title) {
+    font-size: 14px;
+  }
+
+  .about-box {
+    min-height: 280px;
+  }
+
+  .academy-section {
+    padding: 55px 6%;
+  }
+
+  .academy-content h2 {
+    font-size: 29px;
+  }
+
+  .academy-content p:not(.small-title) {
+    font-size: 14px;
+  }
+
+  .academy-card {
+    min-height: 280px;
+
+    padding: 35px 22px;
+  }
+
+  .academy-card h3 {
+    font-size: 20px;
+  }
+
+  .mission-section {
+    padding: 50px 6%;
+  }
+
+  .mission-card {
+    padding: 32px 22px;
+  }
+}
+
+
+/* =========================
+   REDUCE MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .page-banner > div,
+  .about-page .reveal {
+    animation: none;
+
+    transition: none;
+  }
+
+  .about-box,
+  .mission-card,
+  .about-btn,
+  .about-box-icon,
+  .mission-icon,
+  .academy-card,
+  .academy-icon,
+  .academy-btn {
+    transition: none;
+  }
+}

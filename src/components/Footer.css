@@ -1,0 +1,308 @@
+
+/* =========================
+   COMPACT FOOTER
+========================= */
+
+.footer {
+  width: 100%;
+  background: #061d57;
+  color: white;
+}
+
+
+/* =========================
+   MAIN FOOTER
+========================= */
+
+.footer-main {
+  width: 100%;
+
+  padding: 22px 6%;
+
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 1.2fr;
+
+  gap: 35px;
+
+  align-items: center;
+}
+
+
+/* =========================
+   SCHOOL
+========================= */
+
+.footer-school {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 2px solid #e4a21b;
+  border-radius: 50%;
+
+  background: #09245f;
+
+  color: white;
+
+  font-family: Georgia, serif;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.footer-school h3 {
+  margin: 0;
+
+  color: white;
+
+  font-family: Georgia, serif;
+
+  font-size: 16px;
+
+  letter-spacing: 1px;
+}
+
+.footer-school h4 {
+  margin: 1px 0 0;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-family: Georgia, serif;
+
+  font-size: 10px;
+
+  letter-spacing: 1px;
+}
+
+.footer-school > p {
+  display: none;
+}
+
+
+/* =========================
+   QUICK LINKS
+========================= */
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  flex-wrap: wrap;
+}
+
+.footer-links h3 {
+  display: none;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.8);
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #e4a21b;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.footer-contact {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 15px;
+}
+
+.footer-contact h3 {
+  display: none;
+}
+
+.footer-contact p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 11px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================
+   BOTTOM
+========================= */
+
+.footer-bottom {
+  width: 100%;
+
+  padding: 8px 5%;
+
+  text-align: center;
+
+  background: #051746;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 10px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+    padding: 20px 6%;
+  }
+
+  .footer-contact {
+    justify-content: flex-start;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .footer-main {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+
+    padding: 18px 6%;
+  }
+
+  .footer-school {
+    justify-content: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+
+  .footer-contact {
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px 14px;
+  }
+
+  .footer-contact p {
+    white-space: normal;
+  }
+
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.footer-logo-image {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+
+
+/* =========================
+   INSTAGRAM LINK
+========================= */
+
+.instagram-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 8px;
+  padding: 9px 14px;
+
+  color: #ffffff !important;
+  text-decoration: none !important;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+
+  transition: all 0.3s ease;
+
+  cursor: pointer;
+}
+
+.instagram-icon {
+  font-size: 19px;
+}
+
+.instagram-text {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.instagram-text strong {
+  color: #e4a21b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.instagram-link:hover {
+  background: #e4a21b;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 7px 20px rgba(228, 162, 27, 0.3);
+}
+
+.instagram-link:hover .instagram-text {
+  color: #061d57;
+}
+
+.instagram-link:hover .instagram-text strong {
+  color: #061d57;
+}

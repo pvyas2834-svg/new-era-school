@@ -1,0 +1,1147 @@
+/* =====================================================
+   ADMISSIONS PAGE
+===================================================== */
+
+.admissions-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.admissions-banner {
+  position: relative;
+  min-height: 350px;
+  padding: 60px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(4, 24, 72, 0.93),
+      rgba(9, 36, 95, 0.84)
+    ),
+    url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1800&q=80");
+
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+  overflow: hidden;
+}
+
+.admissions-banner::before {
+  content: "";
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  left: -140px;
+  top: -130px;
+
+  border: 1px solid rgba(228, 162, 27, 0.4);
+  border-radius: 50%;
+}
+
+.admissions-banner::after {
+  content: "";
+  position: absolute;
+
+  width: 380px;
+  height: 380px;
+
+  right: -180px;
+  bottom: -210px;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+}
+
+.admissions-banner-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 900px;
+
+  animation: bannerAppear 0.8s ease both;
+}
+
+.admissions-banner p {
+  margin-bottom: 14px;
+
+  color: #e5a51d;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+.admissions-banner h1 {
+  margin: 0 auto 18px;
+
+  font-size: clamp(36px, 5vw, 52px);
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.admissions-banner span {
+  color: #e1e6ef;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   INTRO SECTION
+===================================================== */
+
+.admission-intro {
+  position: relative;
+
+  width: 100%;
+  max-width: none;
+
+  margin: 0;
+  padding: 90px 8%;
+
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+
+  gap: 65px;
+
+  align-items: center;
+
+  background:
+    radial-gradient(
+      circle at 8% 50%,
+      rgba(226, 162, 27, 0.08),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f8faff 55%,
+      #eef4fc 100%
+    );
+
+  border-bottom: 1px solid #e6ebf3;
+}
+
+
+/* subtle background decoration */
+
+.admission-intro::before {
+  content: "";
+
+  position: absolute;
+
+  width: 230px;
+  height: 230px;
+
+  left: -120px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(226, 162, 27, 0.14);
+}
+
+.admission-intro::after {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  right: -90px;
+  top: 20px;
+
+  border-radius: 50%;
+
+  background: rgba(9, 36, 95, 0.035);
+}
+
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
+
+.admission-intro-text {
+  position: relative;
+  z-index: 2;
+
+  padding: 38px 35px 38px 42px;
+
+  background: rgba(255, 255, 255, 0.72);
+
+  border: 1px solid rgba(222, 229, 240, 0.8);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 12px 35px rgba(9, 36, 95, 0.05);
+
+  animation: fadeUp 0.8s ease both;
+}
+
+
+/* gold vertical line */
+
+.admission-intro-text::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 35px;
+
+  width: 5px;
+  height: 115px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #e2a21b,
+      #f5c95b
+    );
+
+  border-radius: 0 8px 8px 0;
+}
+
+
+/* small heading */
+
+.admission-small-title {
+  margin-bottom: 13px;
+
+  color: #e2a21b;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+
+/* main heading */
+
+.admission-intro-text h2 {
+  max-width: 700px;
+
+  margin-bottom: 22px;
+
+  color: #09245f;
+
+  font-size: 40px;
+  line-height: 1.15;
+
+  font-weight: 700;
+}
+
+.admission-intro-text h2 span {
+  color: #e2a21b;
+}
+
+
+/* paragraphs */
+
+.admission-intro-text p:not(.admission-small-title) {
+  max-width: 680px;
+
+  margin-bottom: 16px;
+
+  color: #5c6370;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   MAIN BUTTON
+===================================================== */
+
+.admission-main-btn {
+  margin-top: 10px;
+
+  padding: 13px 24px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #09245f;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.admission-main-btn:hover {
+  background: #e2a21b;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 22px rgba(226, 162, 27, 0.25);
+}
+
+
+/* =====================================================
+   ADMISSIONS OPEN CARD
+===================================================== */
+
+.admission-highlight {
+  position: relative;
+  z-index: 2;
+
+  min-height: 390px;
+
+  padding: 45px 35px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff 0%,
+      #f3f7fd 60%,
+      #eaf1fb 100%
+    );
+
+  border: 1px solid #dbe4f0;
+
+  border-radius: 24px;
+
+  border-top: 5px solid #e2a21b;
+
+  box-shadow:
+    0 18px 45px rgba(9, 36, 95, 0.12);
+
+  overflow: hidden;
+
+  transition: all 0.35s ease;
+
+  animation: fadeUp 0.9s ease 0.15s both;
+}
+
+
+/* decorative gold circle */
+
+.admission-highlight::before {
+  content: "";
+
+  position: absolute;
+
+  width: 170px;
+  height: 170px;
+
+  right: -75px;
+  top: -75px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(226, 162, 27, 0.16),
+      rgba(226, 162, 27, 0.03)
+    );
+}
+
+
+/* decorative blue circle */
+
+.admission-highlight::after {
+  content: "";
+
+  position: absolute;
+
+  width: 130px;
+  height: 130px;
+
+  left: -65px;
+  bottom: -65px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(9, 36, 95, 0.08);
+}
+
+
+/* hover */
+
+.admission-highlight:hover {
+  transform: translateY(-9px);
+
+  box-shadow:
+    0 25px 55px rgba(9, 36, 95, 0.16);
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.admission-highlight-icon {
+  position: relative;
+  z-index: 2;
+
+  width: 88px;
+  height: 88px;
+
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #eef3ff,
+      #dfe8ff
+    );
+
+  border: 6px solid white;
+
+  box-shadow:
+    0 10px 25px rgba(9, 36, 95, 0.13);
+
+  font-size: 38px;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.admission-highlight:hover .admission-highlight-icon {
+  transform: scale(1.08) rotate(-5deg);
+
+  box-shadow:
+    0 14px 30px rgba(9, 36, 95, 0.18);
+}
+
+
+/* =====================================================
+   CARD TITLE
+===================================================== */
+
+.admission-highlight h3 {
+  position: relative;
+  z-index: 2;
+
+  margin-bottom: 13px;
+
+  color: #09245f;
+
+  font-size: 25px;
+}
+
+
+/* gold line */
+
+.admission-highlight h3::after {
+  content: "";
+
+  display: block;
+
+  width: 38px;
+  height: 3px;
+
+  margin: 10px auto 0;
+
+  background: #e2a21b;
+
+  border-radius: 10px;
+}
+
+
+/* card text */
+
+.admission-highlight p {
+  position: relative;
+  z-index: 2;
+
+  max-width: 315px;
+
+  margin-bottom: 24px;
+
+  color: #606774;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* =====================================================
+   CARD BUTTON
+===================================================== */
+
+.admission-highlight button,
+.admission-note button {
+  position: relative;
+  z-index: 3;
+
+  padding: 12px 24px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #09245f;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.admission-highlight button:hover {
+  background: #e2a21b;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 18px rgba(226, 162, 27, 0.25);
+}
+
+
+/* =====================================================
+   ADMISSION PROCESS
+===================================================== */
+
+.admission-process {
+  position: relative;
+
+  padding: 85px 5% 95px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f4f7fc,
+      #eef3fa
+    );
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.admission-heading {
+  margin-bottom: 55px;
+
+  text-align: center;
+}
+
+.admission-heading p {
+  margin-bottom: 9px;
+
+  color: #e2a21b;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+.admission-heading h2 {
+  margin-bottom: 5px;
+
+  color: #09245f;
+
+  font-size: 36px;
+}
+
+.heading-line {
+  width: 55px;
+  height: 3px;
+
+  margin: 14px auto 13px;
+
+  background: #e2a21b;
+
+  border-radius: 5px;
+}
+
+.admission-heading span {
+  color: #777f8c;
+
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   PROCESS CARDS
+===================================================== */
+
+.process-cards {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 22px;
+}
+
+
+/* CARD */
+
+.process-card {
+  position: relative;
+
+  min-height: 285px;
+
+  padding: 30px 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #e1e7f0;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 7px 22px rgba(9, 36, 95, 0.06);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+
+/* gold top */
+
+.process-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #e2a21b,
+      #f5c95b
+    );
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition: transform 0.35s ease;
+}
+
+.process-card:hover::before {
+  transform: scaleX(1);
+}
+
+.process-card:hover {
+  transform: translateY(-10px);
+
+  border-color: #d4deed;
+
+  box-shadow:
+    0 20px 40px rgba(9, 36, 95, 0.13);
+}
+
+
+/* TOP */
+
+.process-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 22px;
+}
+
+
+/* NUMBER */
+
+.process-number {
+  color: #dce2ec;
+
+  font-size: 34px;
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+
+/* ICON */
+
+.process-icon {
+  width: 64px;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff7e4,
+      #fff0c8
+    );
+
+  font-size: 28px;
+
+  box-shadow:
+    0 7px 15px rgba(226, 162, 27, 0.12);
+
+  transition: all 0.35s ease;
+}
+
+.process-card:hover .process-icon {
+  background: #09245f;
+
+  transform: rotate(-5deg) scale(1.08);
+}
+
+
+/* TITLE */
+
+.process-card h3 {
+  margin-bottom: 12px;
+
+  color: #09245f;
+
+  font-size: 21px;
+}
+
+
+/* TEXT */
+
+.process-card p {
+  color: #626976;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* ARROW */
+
+.card-arrow {
+  position: absolute;
+
+  right: 22px;
+  bottom: 18px;
+
+  width: 31px;
+  height: 31px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f1f4f9;
+
+  color: #09245f;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  transition: all 0.3s ease;
+}
+
+.process-card:hover .card-arrow {
+  background: #e2a21b;
+
+  color: white;
+
+  transform: translateX(4px);
+}
+
+
+/* =====================================================
+   DOCUMENTS
+===================================================== */
+
+.documents-section {
+  width: 90%;
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 85px 0;
+
+  display: grid;
+
+  grid-template-columns: 1.2fr 0.8fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+.documents-content h2 {
+  margin-bottom: 30px;
+
+  color: #09245f;
+
+  font-size: 35px;
+}
+
+.document-list {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 14px;
+}
+
+.document-list div {
+  padding: 14px 16px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  background: #f5f8fd;
+
+  border: 1px solid #e5eaf2;
+
+  border-left: 3px solid #e2a21b;
+
+  border-radius: 8px;
+
+  color: #4f5662;
+
+  font-size: 14px;
+
+  transition: all 0.25s ease;
+}
+
+.document-list div:hover {
+  transform: translateX(5px);
+
+  background: #eef3fb;
+
+  box-shadow:
+    0 5px 15px rgba(9, 36, 95, 0.06);
+}
+
+.document-list span {
+  color: #e2a21b;
+
+  font-weight: 800;
+}
+
+
+/* =====================================================
+   INFORMATION NOTE
+===================================================== */
+
+.admission-note {
+  position: relative;
+
+  padding: 40px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #061d57,
+      #0d347d
+    );
+
+  border-radius: 20px;
+
+  color: white;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 18px 38px rgba(6, 29, 87, 0.20);
+}
+
+.admission-note::before {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  right: -80px;
+  top: -90px;
+
+  border: 1px solid rgba(255, 255, 255, 0.13);
+
+  border-radius: 50%;
+}
+
+.admission-note::after {
+  content: "";
+
+  position: absolute;
+
+  width: 120px;
+  height: 120px;
+
+  left: -65px;
+  bottom: -65px;
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  border-radius: 50%;
+}
+
+.note-icon {
+  margin-bottom: 15px;
+
+  font-size: 30px;
+}
+
+.admission-note h3 {
+  margin-bottom: 13px;
+
+  font-size: 23px;
+}
+
+.admission-note p {
+  margin-bottom: 23px;
+
+  color: #dce3ef;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+.admission-note button {
+  position: relative;
+  z-index: 2;
+
+  background: #e2a21b;
+}
+
+.admission-note button:hover {
+  background: white;
+
+  color: #09245f;
+
+  transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes bannerAppear {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .admission-intro,
+  .documents-section {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .process-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .admissions-banner {
+    min-height: 270px;
+
+    padding: 45px 18px;
+  }
+
+  .admissions-banner h1 {
+    font-size: 31px;
+  }
+
+  .admissions-banner span {
+    font-size: 14px;
+  }
+
+
+  /* INTRO MOBILE */
+
+  .admission-intro {
+    width: 100%;
+
+    padding: 55px 6%;
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .admission-intro-text {
+    padding: 32px 25px 32px 30px;
+  }
+
+  .admission-intro-text::before {
+    left: 0;
+
+    top: 30px;
+
+    height: 90px;
+  }
+
+  .admission-intro-text h2 {
+    font-size: 30px;
+  }
+
+
+  .admission-highlight {
+    min-height: 310px;
+
+    padding: 38px 25px;
+  }
+
+
+  /* PROCESS */
+
+  .admission-process {
+    padding: 60px 6% 70px;
+  }
+
+  .admission-heading h2 {
+    font-size: 30px;
+  }
+
+  .process-cards {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .process-card {
+    min-height: auto;
+
+    padding: 28px 23px 35px;
+  }
+
+
+  /* DOCUMENTS */
+
+  .documents-section {
+    width: 88%;
+
+    padding: 60px 0;
+  }
+
+  .documents-content h2 {
+    font-size: 29px;
+  }
+
+  .document-list {
+    grid-template-columns: 1fr;
+  }
+
+  .admission-note {
+    padding: 32px 25px;
+  }
+
+}
+
+
+/* =====================================================
+   REDUCE MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .admissions-banner-content,
+  .admission-intro-text,
+  .admission-highlight {
+    animation: none;
+  }
+
+  .process-card,
+  .process-icon,
+  .card-arrow,
+  .admission-highlight,
+  .admission-main-btn,
+  .document-list div,
+  .admission-note button {
+    transition: none;
+  }
+
+}
