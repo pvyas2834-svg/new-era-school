@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Events.css";
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://new-era-school.onrender.com";
 
 function Events() {
   const [events, setEvents] = useState([]);
@@ -151,7 +151,7 @@ function Events() {
                       {event.description}
                     </p>
 
-                  </div>
+                  </div>1
 
 
                   {/* ARROW */}
