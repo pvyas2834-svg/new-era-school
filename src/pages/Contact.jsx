@@ -24,7 +24,7 @@ function Contact() {
     };
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/enquiries", {
+      const response = await fetch("https://new-era-school.onrender.com/enquiries", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
