@@ -151,7 +151,7 @@ function Events() {
                       {event.description}
                     </p>
 
-                  </div>1
+                  </div>
 
 
                   {/* ARROW */}
